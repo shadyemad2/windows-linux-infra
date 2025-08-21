@@ -1,6 +1,8 @@
 # 🖥️ Hybrid Infrastructure Lab (Windows + Linux)
 This project is a **practical lab environment** built on VMware to simulate a small company IT infrastructure. It integrates **Windows Server (AD, DNS, DHCP, File Share)**, **Linux Server (Web, DB, Backup, Bash Scripts)**, and a **Windows 10 Client**.
 
+<img width="921" height="634" alt="diagram" src="https://github.com/user-attachments/assets/985fefc2-da00-4bcd-8bb8-2cbd2962f376" />
+
 ## 📌 Project Components
 | VM              | Role(s)                                 | Example IP      |
 |-----------------|-----------------------------------------|----------------|
@@ -32,6 +34,12 @@ This project is a **practical lab environment** built on VMware to simulate a sm
 - Join Domain `shady.local`
 - Login using AD user account
 - Access shared folders from Windows Server
+  
+<img width="1053" height="783" alt="OUs" src="https://github.com/user-attachments/assets/d5088a7a-3ac5-4733-a780-5bbee832c212" />
+<img width="1085" height="500" alt="DHCP" src="https://github.com/user-attachments/assets/5a24a8ec-02ea-414b-8ce7-b4b3694326e3" />
+<img width="1440" height="736" alt="shared-folders" src="https://github.com/user-attachments/assets/71da8f9c-70a4-4ea5-8b18-f21460b279a8" />
+
+  
 
 ## ⚙️ Step 4 – Linux Server
 - Static IP: `192.168.213.21`
@@ -48,6 +56,9 @@ This project is a **practical lab environment** built on VMware to simulate a sm
     echo "Backup completed at $DATE"
 - Cron Job (daily at 2 AM)
     0 2 * * * /usr/local/bin/backup.sh
+  
+<img width="845" height="437" alt="script" src="https://github.com/user-attachments/assets/8491f5bb-83ed-4cc7-bea6-e050938ab646" />
+  
 
 ## 📊 Network Diagram
 graph TD
@@ -59,6 +70,9 @@ graph TD
     B --- C
 
 ## 🚀 Outcomes
+
+<img width="1869" height="864" alt="app" src="https://github.com/user-attachments/assets/7f6fdcab-222e-431b-ad3c-aef72a4e2700" />
+
 - Centralized **authentication & file sharing** via Windows Server.
 - **Domain-joined client** (Windows 10).
 - **Web + Database services** on Linux.
