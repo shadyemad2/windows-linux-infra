@@ -1,14 +1,8 @@
 # 🖥️ Hybrid Infrastructure Lab (Windows + Linux)
 This project is a **practical lab environment** built on VMware to simulate a small company IT infrastructure. It integrates **Windows Server (AD, DNS, DHCP, File Share)**, **Linux Server (Web, DB, Backup, Bash Scripts)**, and a **Windows 10 Client**.
 
-<img width="921" height="634" alt="diagram" src="https://github.com/user-attachments/assets/985fefc2-da00-4bcd-8bb8-2cbd2962f376" />
+<img width="377" height="324" alt="image" src="https://github.com/user-attachments/assets/0e06d1de-4825-4b8c-be04-8fb5d39df6a5" />
 
-## 📌 Project Components
-| VM              | Role(s)                                 | Example IP      |
-|-----------------|-----------------------------------------|----------------|
-| Windows Server  | AD + DNS + DHCP + File Shares           | 192.168.213.20 |
-| Linux Server    | Web/App + Database + Backup Scripts     | 192.168.213.21 |
-| Windows 10      | Domain Client (Employee/User)           | 192.168.213.40 |
 
 ## ⚙️ Step 1 – Environment Setup
 - VMware Workstation / Player
@@ -39,7 +33,6 @@ This project is a **practical lab environment** built on VMware to simulate a sm
 <img width="1085" height="500" alt="DHCP" src="https://github.com/user-attachments/assets/5a24a8ec-02ea-414b-8ce7-b4b3694326e3" />
 <img width="1440" height="736" alt="shared-folders" src="https://github.com/user-attachments/assets/71da8f9c-70a4-4ea5-8b18-f21460b279a8" />
 
-  
 
 ## ⚙️ Step 4 – Linux Server
 - Static IP: `192.168.213.21`
