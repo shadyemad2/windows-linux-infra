@@ -1,7 +1,7 @@
 # 🖥️ Hybrid Infrastructure Lab (Windows + Linux)
 This project is a **practical lab environment** built on VMware to simulate a small company IT infrastructure. It integrates **Windows Server (AD, DNS, DHCP, File Share)**, **Linux Server (Web, DB, Backup, Bash Scripts)**, and a **Windows 10 Client**.
 
-<img width="377" height="324" alt="image" src="https://github.com/user-attachments/assets/0e06d1de-4825-4b8c-be04-8fb5d39df6a5" />
+<img width="616" height="538" alt="Screenshot (1003)" src="https://github.com/user-attachments/assets/f7aa3a4b-5ee8-4f79-ac6c-d29dade6d9b6" />
 
 
 ## ⚙️ Step 1 – Environment Setup
