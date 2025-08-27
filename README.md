@@ -69,16 +69,49 @@ graph TD
     A --- C
     B --- C
 
-## 🚀 Outcomes
+ ## Prometeus and Grafana
+ 
+- **Install Prometheus + Node Exporter:**
+  sudo apt install prometheus -y
+wget https://github.com/prometheus/node_exporter/releases/download/v*/node_exporter-*.linux-amd64.tar.gz
+tar xvf node_exporter-*.tar.gz
+./node_exporter &
 
-<img width="1869" height="864" alt="app" src="https://github.com/user-attachments/assets/7f6fdcab-222e-431b-ad3c-aef72a4e2700" />
+- **Configure Prometheus (prometheus.yml):**
+  scrape_configs:
+  - job_name: 'linux_server'
+    static_configs:
+      - targets: ['192.168.213.21:9100']
+  - job_name: 'windows_server'
+    static_configs:
+      - targets: ['192.168.213.20:9182']
 
-- Centralized **authentication & file sharing** via Windows Server.
-- **Domain-joined client** (Windows 10).
-- **Web + Database services** on Linux.
-- Automated **daily backups** with Bash scripting.
-- Extensible for advanced features:
-  - Linux ↔ AD integration
-  - Monitoring & logging
-  - Cloud extensions
+ <img width="1515" height="813" alt="prometheus" src="https://github.com/user-attachments/assets/a2c50092-2138-4cd9-8cbd-a7175ea8ab3b" />
+ <img width="1841" height="790" alt="metrics" src="https://github.com/user-attachments/assets/750b9df8-595f-4f92-83f5-4418c91bccaf" />
+ 
+ ## 🔹 Windows Server Exporter
+- Install WMI Exporter (windows_exporter).
+- Default port: 9182.
+- Provides CPU, Memory, Disk, Network metrics.
+  
+<img width="1191" height="782" alt="windows-exporter" src="https://github.com/user-attachments/assets/00eca679-cd1b-4879-a6f4-a0d57b380474" />
+  
+ ## 🔹 Grafana Setup
+sudo apt install grafana -y
+sudo systemctl enable grafana-server
+sudo systemctl start grafana-server
+- Access: http://192.168.213.21:3000
+- Add Prometheus as a Data Source.
+- Import pre-built dashboards for Linux & Windows.
+  
+<img width="1595" height="740" alt="grafana-linux" src="https://github.com/user-attachments/assets/643a1b15-2329-4862-87f3-1b2ae5448c44" />
+<img width="1613" height="740" alt="grafana-windows" src="https://github.com/user-attachments/assets/930bbc48-ab77-4d46-a122-8dd73402c014" />
+ 
 
+ ## 🚀 Outcomes
+
+✅ Centralized authentication & file sharing via Windows Server.
+✅ Domain-joined Windows 10 client.
+✅ Web + Database services on Linux.
+✅ Automated daily backups with Bash scripting.
+✅ Real-time Monitoring with Prometheus & Grafana.
